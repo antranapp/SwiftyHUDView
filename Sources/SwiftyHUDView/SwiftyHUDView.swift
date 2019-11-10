@@ -33,7 +33,7 @@ public struct SwiftyHUDView<Content>: View where Content: View {
     public var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
-                if (!self.isShowing.value) {
+                if (!self.isShowing.wrappedValue) {
                     self.content()
                 } else {
                     self.content()
